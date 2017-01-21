@@ -1,0 +1,416 @@
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+body {
+    margin: 0px, 0px, 0px, 0px;
+    padding: 0px, 0px, 0px 0px;
+    background-color: #E6E5E5;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #4C4C4C;
+    width: 100%;
+    max-width: 100vw;
+    max-height: 2000px;
+    vertical-align: top;
+    overflow-x: hidden;
+}
+
+a {
+    color: black;
+}
+
+.banner {
+    position: fixed;
+    top: 89%;
+    width: 100%;
+    height: 11%;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.slide_1 {
+    position: absolute;
+    width: 100%;
+    margin: 20vh auto;
+    text-align: center;
+    transition: all ease-in-out 1s;
+}
+
+.slide_1.is_showing {
+    transition: all ease-in-out 1s;
+    transform: rotate(-50deg) translate(-1000px, -1500px);
+}
+
+.name h1 {
+    font-size: 60px;
+    line-height: 60px;
+    transition: all ease-in-out 1.5s;
+    transform: rotate(0deg) translate(0px, 0px);
+}
+
+.name p {
+    font-size: 25px;
+    color: grey;
+    transition: all ease-in-out 1.2s;
+    transform: rotate(0deg) translate(0px, 0px);
+}
+
+.name h1.is_showing {
+    margin-top: 0;
+    height: 0;
+    transition: all ease-in-out 1s;
+    transform: rotate(-50deg) translate(-1000px, -1500px);
+}
+
+.name p.is_showing {
+    margin-top: 0;
+    height: 0;
+    transition: all ease-in-out 1.1s;
+    transform: rotate(-50deg) translate(-1000px, -1500px);
+}
+
+.cover_wrapper, .skills_wrapper, .proj_wrapper, .contact_wrapper {
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.my_picture {
+    display: inline-block;
+    vertical-align: top;
+    width: 120px;
+    height: 120px;
+    background-image: url(me.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-top: 30px;
+    transition: all ease-in-out .9s;
+    transform: translate(-1500%, 1500%) rotate(-45deg);
+}
+
+.my_picture.is_showing {
+    transition: all 1.4s cubic-bezier(0.56, .86, 0.5, 1.03);
+    transform: translate(0px, 0px);
+}
+
+.cover {
+    text-align: left;
+    display: inline-block;
+    max-width: 400px;
+    padding: 10px;
+}
+
+.cover h1 {
+    transition: all ease-in-out 1.1s;
+    transform: translate(200%, 5000%) rotate(15deg);
+}
+
+.cover h1.is_showing {
+    transition: all ease-in-out 1s;
+    transform: translate(0px, 0px) rotate(0);
+}
+
+.paragraph {
+    transition: all ease-in-out .9s;
+    transform: translate(200%, 500%) rotate(15deg);
+}
+
+.paragraph.is_showing {
+    transition: all ease-in-out 1.1s;
+    transform: translate(0px, 0px) rotate(0);
+}
+
+.sfa_picture {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+    background-image: url(sfa.png);
+    background-size: cover;
+    width: 140px;
+    height: 130px;
+    transition: all ease-in-out 1.2s;
+    transform: translate(500%, -500%) rotate(-70deg);
+}
+
+.sfa_picture.is_showing {
+    transition: all ease-in-out 1.2s;
+    transform: translate(0px, 0px);
+}
+
+.skills {
+    display: inline-block;
+    text-align: left;
+    width: 300px;
+    padding: 10px;
+    transition: all ease-in-out 1.3s;
+    transform: translate(500%, -500%) rotate(-70deg);
+}
+
+.skills.is_showing {
+    transition: all ease-in-out 1.3s;
+    transform: translate(0px, 0px);
+}
+
+.projects {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 1000px;
+    height: 500px;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+    transition: all ease-in-out 1.3s;
+    transform: translate(-200%, 500%) rotate(-100deg);
+}
+
+.projects.is_showing {
+    transition: all ease-in-out 1.3s;
+    transform: translate(0px, 0px);
+}
+
+.project-title {
+    transition: all ease-in-out 1.3s;
+    transform: translate(-200%, 500%) rotate(-100deg);
+}
+
+.project-title.is_showing {
+    transition: all ease-in-out 1.3s;
+    transform: translate(0px, 0px);
+}
+
+
+/************/
+
+.lfcn {
+    width: 320px;
+    height: 170px;
+    background-image: url(lfcn.png);
+    background-size: cover;
+    margin: 10px;
+    border-radius: 5px;
+    transition: all ease-in-out .5s;
+    transform: scale(1);
+    z-index: 0;
+    opacity: 0;
+}
+
+.lfcn.is_showing:hover {
+    transition: all ease-in-out .2s;
+    transform: scale(1.1);
+    z-index: 1000;
+}
+
+.aps {
+    width: 320px;
+    height: 250px;
+    background-image: url(aps.png);
+    background-size: cover;
+    margin: 10px;
+    border-radius: 5px;
+    transition: all ease-in-out .2s;
+    transform: scale(1);
+    z-index: 0;
+    opacity: 0;
+}
+
+.aps.is_showing:hover {
+    transition: all ease-in-out .2s;
+    transform: scale(1.1);
+    z-index: 1000;
+}
+
+.affinity {
+    width: 320px;
+    height: 200px;
+    background-image: url(affinity.png);
+    background-size: cover;
+    margin: 10px;
+    border-radius: 5px;
+    transition: all ease-in-out .2s;
+    transform: scale(1);
+    z-index: 0;
+    opacity: 0;
+}
+
+.affinity.is_showing:hover {
+    transition: all ease-in-out .2s;
+    transform: scale(1.1);
+    z-index: 1000;
+}
+
+.old-resume {
+    width: 320px;
+    height: 206px;
+    background-image: url(old-resume.png);
+    background-size: cover;
+    margin: 10px;
+    border-radius: 5px;
+    transition: all ease-in-out .2s;
+    transform: scale(1);
+    z-index: 0;
+    opacity: 0;
+}
+
+.old-resume.is_showing:hover {
+    transition: all ease-in-out .2s;
+    transform: scale(1.1);
+    z-index: 1000;
+}
+
+.grade-tracker {
+    width: 320px;
+    height: 450px;
+    background-image: url(grade.png);
+    background-size: cover;
+    margin: 10px;
+    border-radius: 5px;
+    transition: all ease-in-out .2s;
+    transform: scale(1);
+    z-index: 0;
+    opacity: 0;
+}
+
+.grade-tracker.is_showing:hover {
+    transition: all ease-in-out .2s;
+    transform: scale(1.1);
+    z-index: 1000;
+}
+
+.lfcn.is_showing {
+    opacity: 0;
+    animation-name: pop;
+    animation-duration: 200ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.aps.is_showing {
+    opacity: 0;
+    animation-name: pop;
+    animation-duration: 250ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.affinity.is_showing {
+    opacity: 0;
+    animation-name: pop;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.old-resume.is_showing {
+    opacity: 0;
+    animation-name: pop;
+    animation-duration: 350ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.grade-tracker.is_showing {
+    opacity: 0;
+    animation-name: pop;
+    animation-duration: 400ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/*************/
+
+.contact {
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+}
+
+.contact h1 {
+    transition: all ease-in-out 1.2s;
+    transform: translate(0%, -1000%);
+}
+
+.social {
+    transition: all ease-in-out 1.2s;
+    transform: translate(0%, -1000%);
+}
+
+.contact_info {
+    transition: all ease-in-out 1.2s;
+    transform: translate(0%, -1000%);
+}
+
+.contact h1.is_showing {
+    transition: all ease-in-out 1.2s;
+    transform: translate(0%, 0%);
+}
+
+.social.is_showing {
+    transition: all ease-in-out 1.2s;
+    transform: translate(0%, 0%);
+}
+
+.contact_info.is_showing {
+    transition: all ease-in-out 1.4s;
+    transform: translate(0%, 0%);
+}
+
+button {
+    background-color: white;
+    border: 1px solid #B3B1B1;
+    border-radius: 3px;
+    width: 50px;
+    height: 35px;
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        font-size: 13px;
+    }
+    .cover_wrapper, .skills_wrapper, .proj_wrapper, .contact_wrapper {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .projects {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        margin: auto;
+    }
+}
